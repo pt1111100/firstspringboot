@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>彭氏管理系统</title>
-    <link rel="stylesheet" type="text/css" href="static/css/login.css"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/login.css}"/>
 </head>
 <body>
  <div id="login_frame">
-    <p id="image_logo"><img src="static/images/551.jpg"></p>
-    <form th:action="${/login}">
+    <p id="image_logo"><img th:src="@{/images/551.jpg}"></p>
+    <form th:action="@{/login}" method="post">
         <p><label class="label_input">用户名</label><input type="text" id="name" class="text_field"/></p>
         <p><label class="label_input">密码</label><input type="text" id="passwd" class="text_field"/></p>
         <div id="login_control">

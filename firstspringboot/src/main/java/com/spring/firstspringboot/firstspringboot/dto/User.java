@@ -1,10 +1,15 @@
 package com.spring.firstspringboot.firstspringboot.dto;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
 /**
  * @author pengtong
  * @date 2020/7/29
  **/
+@Entity
 public class User {
+    @Id
     int id;
     String name;
     String passwd;
